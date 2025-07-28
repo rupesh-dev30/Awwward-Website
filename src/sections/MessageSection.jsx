@@ -54,7 +54,9 @@ const MessageSection = () => {
     const paragraphTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".message-content p",
-        start: "top center",
+        start: "-1000% top",
+        end: "200% center",
+        scrub: true,
       },
     });
     paragraphTl.from(paragraphSplit.words, {
